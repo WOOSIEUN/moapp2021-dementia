@@ -13,6 +13,8 @@
 		B26202EE265D330600CE590F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B26202ED265D330600CE590F /* Assets.xcassets */; };
 		B26202F1265D330600CE590F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B26202F0265D330600CE590F /* Preview Assets.xcassets */; };
 		B26202F4265D330600CE590F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B26202F2265D330600CE590F /* LaunchScreen.storyboard */; };
+		B26202FC265D847000CE590F /* DementiaTestM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26202FB265D847000CE590F /* DementiaTestM.swift */; };
+		B26202FE265D88C600CE590F /* DementiaTestVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26202FD265D88C600CE590F /* DementiaTestVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		B26202F0265D330600CE590F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B26202F3265D330600CE590F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B26202F5265D330600CE590F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B26202FB265D847000CE590F /* DementiaTestM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DementiaTestM.swift; sourceTree = "<group>"; };
+		B26202FD265D88C600CE590F /* DementiaTestVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DementiaTestVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				B26202E7265D330500CE590F /* AppDelegate.swift */,
 				B26202E9265D330500CE590F /* SceneDelegate.swift */,
 				B26202EB265D330500CE590F /* ContentView.swift */,
+				B26202FB265D847000CE590F /* DementiaTestM.swift */,
+				B26202FD265D88C600CE590F /* DementiaTestVM.swift */,
 				B26202ED265D330600CE590F /* Assets.xcassets */,
 				B26202F2265D330600CE590F /* LaunchScreen.storyboard */,
 				B26202F5265D330600CE590F /* Info.plist */,
@@ -145,6 +151,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B26202FC265D847000CE590F /* DementiaTestM.swift in Sources */,
+				B26202FE265D88C600CE590F /* DementiaTestVM.swift in Sources */,
 				B26202E8265D330500CE590F /* AppDelegate.swift in Sources */,
 				B26202EA265D330500CE590F /* SceneDelegate.swift in Sources */,
 				B26202EC265D330500CE590F /* ContentView.swift in Sources */,
