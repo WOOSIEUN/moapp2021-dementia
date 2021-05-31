@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		B23680032664AF0200416234 /* DementiaTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23680022664AF0200416234 /* DementiaTestView.swift */; };
 		B23680052664BFAD00416234 /* DementiaTestResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23680042664BFAD00416234 /* DementiaTestResultView.swift */; };
+		B236800B26651BA800416234 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B236800A26651BA800416234 /* ListItem.swift */; };
+		B236800D2665241B00416234 /* DementiaGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B236800C2665241B00416234 /* DementiaGuideView.swift */; };
+		B236800F26652A5100416234 /* ListHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B236800E26652A5100416234 /* ListHeader.swift */; };
 		B26202E8265D330500CE590F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26202E7265D330500CE590F /* AppDelegate.swift */; };
 		B26202EA265D330500CE590F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26202E9265D330500CE590F /* SceneDelegate.swift */; };
 		B26202EC265D330500CE590F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26202EB265D330500CE590F /* ContentView.swift */; };
@@ -22,6 +25,9 @@
 /* Begin PBXFileReference section */
 		B23680022664AF0200416234 /* DementiaTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DementiaTestView.swift; sourceTree = "<group>"; };
 		B23680042664BFAD00416234 /* DementiaTestResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DementiaTestResultView.swift; sourceTree = "<group>"; };
+		B236800A26651BA800416234 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		B236800C2665241B00416234 /* DementiaGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DementiaGuideView.swift; sourceTree = "<group>"; };
+		B236800E26652A5100416234 /* ListHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHeader.swift; sourceTree = "<group>"; };
 		B26202E4265D330500CE590F /* moapp2021-dementia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "moapp2021-dementia.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B26202E7265D330500CE590F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B26202E9265D330500CE590F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,9 +73,12 @@
 				B26202E7265D330500CE590F /* AppDelegate.swift */,
 				B26202E9265D330500CE590F /* SceneDelegate.swift */,
 				B26202EB265D330500CE590F /* ContentView.swift */,
+				B236800C2665241B00416234 /* DementiaGuideView.swift */,
 				B23680022664AF0200416234 /* DementiaTestView.swift */,
 				B23680042664BFAD00416234 /* DementiaTestResultView.swift */,
 				B26202FB265D847000CE590F /* DementiaTestM.swift */,
+				B236800A26651BA800416234 /* ListItem.swift */,
+				B236800E26652A5100416234 /* ListHeader.swift */,
 				B26202FD265D88C600CE590F /* DementiaTestVM.swift */,
 				B26202ED265D330600CE590F /* Assets.xcassets */,
 				B26202F2265D330600CE590F /* LaunchScreen.storyboard */,
@@ -161,9 +170,12 @@
 				B26202FE265D88C600CE590F /* DementiaTestVM.swift in Sources */,
 				B26202E8265D330500CE590F /* AppDelegate.swift in Sources */,
 				B23680032664AF0200416234 /* DementiaTestView.swift in Sources */,
+				B236800B26651BA800416234 /* ListItem.swift in Sources */,
 				B23680052664BFAD00416234 /* DementiaTestResultView.swift in Sources */,
 				B26202EA265D330500CE590F /* SceneDelegate.swift in Sources */,
 				B26202EC265D330500CE590F /* ContentView.swift in Sources */,
+				B236800F26652A5100416234 /* ListHeader.swift in Sources */,
+				B236800D2665241B00416234 /* DementiaGuideView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

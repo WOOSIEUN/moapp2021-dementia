@@ -15,7 +15,7 @@ struct ContentView: View {
             VStack {
                 HStack{
                     NavigationLink(
-                        destination: Text("Destination"),
+                        destination: DementiaGuideView(),
                         label: {
                             ZStack{
                                 RoundedRectangle(cornerRadius:10.0).fill(Color.white)
