@@ -27,6 +27,7 @@ struct DementiaTestView: View {
                 Text(sentence[testRound-1])
                     .font(Font.system(size: 70))
                     .multilineTextAlignment(.center)
+                    .padding(30)
             }
             HStack{
                 ZStack{
@@ -82,10 +83,39 @@ struct DementiaTestResultView: View {
     @Binding var testScore : Int
     
     var body: some View {
-        if testScore > 5 {
-            Text("Test score가 6 이상")
-        } else {
-            Text("Test score가 6 이하")
+        VStack{
+            Text("검사결과")
+                .font(Font.system(size: 100))
+                .foregroundColor(.black)
+            Spacer()
+            if testScore > 5 {
+                Text("치매 위험이 있습니다.")
+                    .font(Font.system(size: 90))
+                    .foregroundColor(.red)
+                Spacer()
+                Spacer()
+                Text("주소지 관할 치매안심센터를 방문하셔서 더 정확한 검진을 받아보시기 바랍니다.")
+                    .font(Font.system(size: 50))
+                    .foregroundColor(.black)
+                    .multilineTextAlignment(.center)
+                    .padding(30)
+            } else {
+                Text("정상입니다!")
+                .font(Font.system(size: 90))
+                .foregroundColor(.green)
+                Spacer()
+                Spacer()
+                Text("운동과 외부 사회활동을 유지하고 치매예방수칙 3·3·3을 잘 실천하여 치매를 예방하세요.\n 더 정확한 검진을 원하신다면 주소지 관할 치매안심센터를 방문해주세요.")
+                    .font(Font.system(size: 50))
+                    .foregroundColor(.black)
+                    .multilineTextAlignment(.center)
+                    .padding(30)
+            }
+            Spacer();Spacer();Spacer()
+            Text("참고문헌 : Youn, J.C., Kim, K.W., Lee, D.Y., Jhoo, J.H., Lee, S.B., Park, J.H., ...&Woo, J.I.(2009).Development of the subjective memory complaints questionnaire. Dementia and geriatric cognitive disorders, 27(4), 310-317.\n출처 : 중앙치매센터 『치매자가진단』")
+                .foregroundColor(.black)
+                .multilineTextAlignment(.center)
+                .padding(30)
         }
     }
 }
