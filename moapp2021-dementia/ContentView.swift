@@ -47,7 +47,7 @@ struct ContentView: View {
                         }
                     )
                     NavigationLink(
-                        destination: DementiaTestView(),
+                        destination: Text("Destination"),
                         label: {
                             ZStack{
                                 RoundedRectangle(cornerRadius:10.0).fill(Color.white)
