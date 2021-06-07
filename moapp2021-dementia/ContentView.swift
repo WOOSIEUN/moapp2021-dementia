@@ -9,6 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     //var DementiaTestVM: DementiaTestVM
+    var csv_content : read_csvfile
+    init(csv_content: read_csvfile){
+        self.csv_content=csv_content
+    }
     
     var body: some View {
         NavigationView {
@@ -46,8 +50,9 @@ struct ContentView: View {
                             }
                         }
                     )
+                    //두 번 들어가면 렉 걸림
                     NavigationLink(
-                        destination: Text("Destination"),
+                        destination: CenterView(csv_content: csv_content),
                         label: {
                             ZStack{
                                 RoundedRectangle(cornerRadius:10.0).fill(Color.white)
@@ -91,8 +96,8 @@ struct ContentView: View {
 //    }
 //}
 
-    struct Content_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentView()
-        }
-    }
+//    struct Content_Previews: PreviewProvider {
+//        static var previews: some View {
+//            ContentView()
+//        }
+//    }
