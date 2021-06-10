@@ -26,17 +26,24 @@ struct CenterView: View {
     
 //    let urlString : NSURL = NSURL(string: "tel://010-1111-2222")!
 //
+   // let csvfile = read_csvfile()
     var body: some View {
+        
+        
+        
+        
+        
         
         HStack{
         //NavigationView {
             Form{
                 Section{
                     Text("지역을 선택하세요")
-                    Picker(selection: $selectedcity, label:Text("시도선택")) {
+                        .font(.system(size:25))
+                    Picker(selection: $selectedcity, label:Text("시도선택").font(.system(size:25))) {
                         ForEach(0 ..< cities.count) { index in
                              Text(self.cities[index]).tag(index)
-                                            //.font(.system(size: 33))
+                                .font(.system(size:50))
                         }
                     }.pickerStyle(MenuPickerStyle())
                 }
@@ -44,35 +51,43 @@ struct CenterView: View {
             .frame(width: 300)
             
             
-            Form{
-                VStack(alignment: .leading) {
-                  //  Button(action: {
-//                    let phone="tel://010-1111-2222"
-//                    guard let url=URL(string: phone) else {
-//                        return
-//                    }
-//                    UIApplication.shared.open(url)
-//                    }) {
-//                        Text("010-1111-2222")
-//                    }
-//                    if UIApplication.shared.canOpenURL(url) {
-//                            UIApplication.shared.open(url, options: [:], completionHandler: nil)
-//                    }
-                    
-                    
-                    ForEach(0..<centerlistlen){ i in
-                        if csv_content.people[i].centerCity.contains(cities[selectedcity]){
-                            Text(name(selectcity: i))
-                                .bold()
-                            Text(ctype(selectcity: i))
-                            Text(address(selectcity: i))
-                            Text(number(selectcity: i))
-
-                            Divider()
+           VStack(alignment: .leading) {
+                ScrollView{
+                    LazyVStack(alignment: .leading){
+                        
+                        ForEach(0..<centerlistlen){ i in
+                            if csv_content.people[i].centerCity.contains(cities[selectedcity]){
+                                
+                                Text(name(selectcity: i))
+                                    .bold()
+                                    .font(.system(size:35))
+                                    .padding(.leading, 20)
+                                    .padding(.bottom, 10)
+                                    .padding(.top, 20)
+                               
+                                Text(ctype(selectcity: i))
+                                    .font(.system(size:30))
+                                    .padding(.leading, 20)
+                                    .padding(.bottom, 10)
+                                Text(address(selectcity: i))
+                                    .font(.system(size:30))
+                                    .padding(.leading, 20)
+                                    .padding(.bottom, 10)
+                                Button(action: {
+                                    calling(number: number(selectcity: i))
+                                }){
+                                    Text(number(selectcity: i))
+                                        .font(.system(size:30))
+                                        .padding(.leading, 20)
+                                        .padding(.bottom, 20)
+                                }
+                                Spacer()
+                                Divider()
+                                Spacer()
+                            }
                         }
-                    }.lineLimit(1)
+                    }
                 }
-
             }
         }
     }
