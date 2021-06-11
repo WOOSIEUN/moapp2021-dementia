@@ -21,7 +21,7 @@ struct DementiaGuideView: View {
                         ListHeader(title: "치매 바로알기!", bgColor: Color.purple)
                         
                         NavigationLink(
-                            destination: Text("Destination"),
+                            destination: DementiaGuideContentsView(filename: "Guide1"),
                             label: {
                                 ListItem(title: "치매 알아보기", strokeColor: Color.purple)
                             }

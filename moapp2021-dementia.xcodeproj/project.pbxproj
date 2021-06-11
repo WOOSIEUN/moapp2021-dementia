@@ -21,6 +21,8 @@
 		B26202EE265D330600CE590F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B26202ED265D330600CE590F /* Assets.xcassets */; };
 		B26202F1265D330600CE590F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B26202F0265D330600CE590F /* Preview Assets.xcassets */; };
 		B26202F4265D330600CE590F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B26202F2265D330600CE590F /* LaunchScreen.storyboard */; };
+		B2F61B522673F6BB00DCB7DF /* DementiaGuideContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F61B512673F6BB00DCB7DF /* DementiaGuideContents.swift */; };
+		B2F61B542673F90D00DCB7DF /* Guide1.txt in Resources */ = {isa = PBXBuildFile; fileRef = B2F61B532673F90D00DCB7DF /* Guide1.txt */; };
 		D179A6D52673E6ED00A9911F /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D179A6D32673E6ED00A9911F /* GameView.swift */; };
 		D179A6D62673E6ED00A9911F /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D179A6D42673E6ED00A9911F /* Alert.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +44,8 @@
 		B26202F0265D330600CE590F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B26202F3265D330600CE590F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B26202F5265D330600CE590F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2F61B512673F6BB00DCB7DF /* DementiaGuideContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DementiaGuideContents.swift; sourceTree = "<group>"; };
+		B2F61B532673F90D00DCB7DF /* Guide1.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Guide1.txt; sourceTree = "<group>"; };
 		D179A6D32673E6ED00A9911F /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		D179A6D42673E6ED00A9911F /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,16 +83,18 @@
 				B26202E7265D330500CE590F /* AppDelegate.swift */,
 				B26202E9265D330500CE590F /* SceneDelegate.swift */,
 				B26202EB265D330500CE590F /* ContentView.swift */,
+				B236800C2665241B00416234 /* DementiaGuideView.swift */,
+				B2F61B512673F6BB00DCB7DF /* DementiaGuideContents.swift */,
+				B23680022664AF0200416234 /* DementiaTestView.swift */,
+				B236800E26652A5100416234 /* ListHeader.swift */,
+				B236800A26651BA800416234 /* ListItem.swift */,
 				54B6B64A266E572F001AFE3D /* CenterView.swift */,
 				54B7FCAD2670CFE100692E09 /* call_center.swift */,
 				54B6B64C266E577F001AFE3D /* read_csvfile.swift */,
 				D179A6D42673E6ED00A9911F /* Alert.swift */,
 				D179A6D32673E6ED00A9911F /* GameView.swift */,
 				54B6B650266E580C001AFE3D /* data.csv */,
-				B236800C2665241B00416234 /* DementiaGuideView.swift */,
-				B23680022664AF0200416234 /* DementiaTestView.swift */,
-				B236800A26651BA800416234 /* ListItem.swift */,
-				B236800E26652A5100416234 /* ListHeader.swift */,
+				B2F61B532673F90D00DCB7DF /* Guide1.txt */,
 				B26202ED265D330600CE590F /* Assets.xcassets */,
 				B26202F2265D330600CE590F /* LaunchScreen.storyboard */,
 				B26202F5265D330600CE590F /* Info.plist */,
@@ -166,6 +172,7 @@
 				B26202F4265D330600CE590F /* LaunchScreen.storyboard in Resources */,
 				B26202F1265D330600CE590F /* Preview Assets.xcassets in Resources */,
 				B26202EE265D330600CE590F /* Assets.xcassets in Resources */,
+				B2F61B542673F90D00DCB7DF /* Guide1.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +190,7 @@
 				B236800B26651BA800416234 /* ListItem.swift in Sources */,
 				D179A6D52673E6ED00A9911F /* GameView.swift in Sources */,
 				54B6B64B266E572F001AFE3D /* CenterView.swift in Sources */,
+				B2F61B522673F6BB00DCB7DF /* DementiaGuideContents.swift in Sources */,
 				B26202EA265D330500CE590F /* SceneDelegate.swift in Sources */,
 				54B6B64D266E577F001AFE3D /* read_csvfile.swift in Sources */,
 				B26202EC265D330500CE590F /* ContentView.swift in Sources */,
