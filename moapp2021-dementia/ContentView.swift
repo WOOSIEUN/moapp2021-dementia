@@ -41,7 +41,7 @@ struct ContentView: View {
                 }
                 HStack{
                     NavigationLink(
-                        destination: Text("Destination"),
+                        destination: GameView(),
                         label: {
                             ZStack{
                                 RoundedRectangle(cornerRadius:10.0).fill(Color.white)

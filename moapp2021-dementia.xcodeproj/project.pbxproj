@@ -24,6 +24,8 @@
 		B26202F4265D330600CE590F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B26202F2265D330600CE590F /* LaunchScreen.storyboard */; };
 		B26202FC265D847000CE590F /* DementiaTestM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26202FB265D847000CE590F /* DementiaTestM.swift */; };
 		B26202FE265D88C600CE590F /* DementiaTestVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26202FD265D88C600CE590F /* DementiaTestVM.swift */; };
+		D179A6D52673E6ED00A9911F /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D179A6D32673E6ED00A9911F /* GameView.swift */; };
+		D179A6D62673E6ED00A9911F /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D179A6D42673E6ED00A9911F /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		B26202F5265D330600CE590F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B26202FB265D847000CE590F /* DementiaTestM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DementiaTestM.swift; sourceTree = "<group>"; };
 		B26202FD265D88C600CE590F /* DementiaTestVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DementiaTestVM.swift; sourceTree = "<group>"; };
+		D179A6D32673E6ED00A9911F /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		D179A6D42673E6ED00A9911F /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,8 @@
 				54B6B64A266E572F001AFE3D /* CenterView.swift */,
 				54B7FCAD2670CFE100692E09 /* call_center.swift */,
 				54B6B64C266E577F001AFE3D /* read_csvfile.swift */,
+				D179A6D42673E6ED00A9911F /* Alert.swift */,
+				D179A6D32673E6ED00A9911F /* GameView.swift */,
 				54B6B650266E580C001AFE3D /* data.csv */,
 				B236800C2665241B00416234 /* DementiaGuideView.swift */,
 				B23680022664AF0200416234 /* DementiaTestView.swift */,
@@ -182,9 +188,11 @@
 				54B7FCAE2670CFE100692E09 /* call_center.swift in Sources */,
 				B26202FC265D847000CE590F /* DementiaTestM.swift in Sources */,
 				B26202FE265D88C600CE590F /* DementiaTestVM.swift in Sources */,
+				D179A6D62673E6ED00A9911F /* Alert.swift in Sources */,
 				B26202E8265D330500CE590F /* AppDelegate.swift in Sources */,
 				B23680032664AF0200416234 /* DementiaTestView.swift in Sources */,
 				B236800B26651BA800416234 /* ListItem.swift in Sources */,
+				D179A6D52673E6ED00A9911F /* GameView.swift in Sources */,
 				B23680052664BFAD00416234 /* DementiaTestResultView.swift in Sources */,
 				54B6B64B266E572F001AFE3D /* CenterView.swift in Sources */,
 				B26202EA265D330500CE590F /* SceneDelegate.swift in Sources */,
