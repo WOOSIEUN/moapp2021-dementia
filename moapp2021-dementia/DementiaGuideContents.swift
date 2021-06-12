@@ -59,7 +59,7 @@ class Model: ObservableObject {
     @Published var dataArr: Array<String> = []
     
     init(filename: String) {
-        self.load(file: filename)
+        self.load(file: "Data/Text/" + filename)
     }
     
     func load(file: String) {

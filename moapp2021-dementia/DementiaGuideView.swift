@@ -27,7 +27,7 @@ struct DementiaGuideView: View {
                             }
                         )
                         NavigationLink(
-                            destination: Text("Destination"),
+                            destination: DementiaGuideContentsView(filename: "Guide2"),
                             label: {
                                 ListItem(title: "치매 단계별 증상", strokeColor: Color.purple)
                             }
