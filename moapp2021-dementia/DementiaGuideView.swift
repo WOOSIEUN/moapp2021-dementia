@@ -33,7 +33,7 @@ struct DementiaGuideView: View {
                             }
                         )
                         NavigationLink(
-                            destination: Text("Destination"),
+                            destination: DementiaGuideContentsView(filename: "Guide3"),
                             label: {
                                 ListItem(title: "치매 조기발견과 지속치료의 중요성", strokeColor: Color.purple)
                             }
@@ -44,25 +44,31 @@ struct DementiaGuideView: View {
                         ListHeader(title: "치매가 걱정되세요?", bgColor: Color.yellow)
                         
                         NavigationLink(
-                            destination: Text("Destination"),
+                            destination: DementiaGuideContentsView(filename: "Guide4"),
                             label: {
                                 ListItem(title: "치매 예방 수칙", strokeColor: Color.yellow)
                             }
                         )
                         NavigationLink(
-                            destination: Text("Destination"),
+                            destination: DementiaGuideContentsView(filename: "Guide5"),
+                            label: {
+                                ListItem(title: "세대별 치매 예방 액션플랜", strokeColor: Color.yellow)
+                            }
+                        )
+                        NavigationLink(
+                            destination: DementiaGuideContentsView(filename: "Guide6"),
                             label: {
                                 ListItem(title: "치매 예방 인지훈련 - 두근두근 뇌운동", strokeColor: Color.yellow)
                             }
                         )
                         NavigationLink(
-                            destination: Text("Destination"),
+                            destination: DementiaGuideContentsView(filename: "Guide7"),
                             label: {
                                 ListItem(title: "치매 안심 센터", strokeColor: Color.yellow)
                             }
                         )
                         NavigationLink(
-                            destination: Text("Destination"),
+                            destination: DementiaGuideContentsView(filename: "Guide8"),
                             label: {
                                 ListItem(title: "치매 조기검진 사업", strokeColor: Color.yellow)
                             }
@@ -73,13 +79,13 @@ struct DementiaGuideView: View {
                         ListHeader(title: "치매로 진단 받으셨나요?", bgColor: Color.blue)
                         
                         NavigationLink(
-                            destination: Text("Destination"),
+                            destination: DementiaGuideContentsView(filename: "Guide9"),
                             label: {
                                 ListItem(title: "치매 환자 지원 사업", strokeColor: Color.blue)
                             }
                         )
                         NavigationLink(
-                            destination: Text("Destination"),
+                            destination: DementiaGuideContentsView(filename: "Guide10"),
                             label: {
                                 ListItem(title: "치매 상담 콜센터", strokeColor: Color.blue)
                             }
@@ -90,14 +96,25 @@ struct DementiaGuideView: View {
                         ListHeader(title: "치매, 지혜롭게 극복합시다!", bgColor: Color.green)
                         
                         NavigationLink(
-                            destination: Text("Destination"),
+                            destination: DementiaGuideContentsView(filename: "Guide11"),
+                            label: {
+                                ListItem(title: "치매돌봄 10계명", strokeColor: Color.green)
+                            }
+                        )
+                        NavigationLink(
+                            destination: DementiaGuideContentsView(filename: "Guide12"),
+                            label: {
+                                ListItem(title: "치매 환자와의 대화 방법", strokeColor: Color.green)
+                            }
+                        )
+                        NavigationLink(
+                            destination: DementiaGuideContentsView(filename: "Guide13"),
                             label: {
                                 ListItem(title: "치매 가족 및 보호자 지원 사업", strokeColor: Color.green)
                             }
                         )
-                        
                         NavigationLink(
-                            destination: Text("Destination"),
+                            destination: DementiaGuideContentsView(filename: "Guide14"),
                             label: {
                                 ListItem(title: "치매 관련 시설을 고르는 방법", strokeColor: Color.green)
                             }

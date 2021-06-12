@@ -48,6 +48,8 @@ struct InternalView: View {
                         }
                     }
                 }
+                Text("해당 자료는 중앙치매센터의 '2020 나에게 힘이 되는 치매가이드북'을 기반으로 제작되었습니다.\n제공되는 음성은 CLOVA Dubbing으로 제작한 AI 보이스 입니다.")
+                    .foregroundColor(.black)
             }
             .padding()
         }
