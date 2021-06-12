@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import AVFoundation
 
 struct DementiaGuideContentsView: View {
     var filename: String
@@ -25,52 +26,77 @@ struct InternalView: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading){
-                ForEach(model.dataArr, id: \.self) { dataStr in
-                    if (dataStr != "") {
-                        let index = dataStr.index(dataStr.startIndex, offsetBy:1)
-                        if (dataStr[dataStr.startIndex] == "#") {
-                            Text(dataStr[index ..< dataStr.endIndex])
-                                .fontWeight(.bold)
-                                .font(Font.system(size: 100))
-                                .foregroundColor(.black)
-                        } else if (dataStr[dataStr.startIndex] == "$") {
-                            Text(dataStr[index ..< dataStr.endIndex])
-                                .font(Font.system(size: 60))
-                                .foregroundColor(.black)
-                                .padding()
-                        } else if (dataStr[dataStr.startIndex] == "%") {
-                            Text(dataStr[index ..< dataStr.endIndex])
-                                .font(Font.system(size: 40))
-                                .foregroundColor(.black)
-                                .lineSpacing(10)
-                                .padding(12)
+            VStack{
+                Button(action: {
+                    model.audioPlayer.play()
+                }) {
+                    VStack{
+                        Text("음성으로 듣기")
+                            .fontWeight(.bold)
+                            .font(Font.system(size: 70))
+                            .lineSpacing(0)
+                        Image("CLOVA_dubbing_watermark_white_hd")
+                    }
+                    .padding(40)
+                    .foregroundColor(.white)
+                    .background(Color.orange)
+                    .cornerRadius(10)
+                }
+                Spacer();Spacer();Spacer()
+                VStack(alignment: .leading){
+                    ForEach(model.dataArr, id: \.self) { dataStr in
+                        if (dataStr != "") {
+                            let index = dataStr.index(dataStr.startIndex, offsetBy:1)
+                            if (dataStr[dataStr.startIndex] == "#") {
+                                Text(dataStr[index ..< dataStr.endIndex])
+                                    .fontWeight(.bold)
+                                    .font(Font.system(size: 100))
+                                    .foregroundColor(.black)
+                            } else if (dataStr[dataStr.startIndex] == "$") {
+                                Text(dataStr[index ..< dataStr.endIndex])
+                                    .fontWeight(.bold)
+                                    .font(Font.system(size: 60))
+                                    .foregroundColor(.black)
+                                    .background(Color.yellow)
+                                    .fixedSize(horizontal: false, vertical: true)
+                                    .padding()
+                            } else if (dataStr[dataStr.startIndex] == "%") {
+                                Text(dataStr[index ..< dataStr.endIndex])
+                                    .font(Font.system(size: 40))
+                                    .foregroundColor(.black)
+                                    .lineSpacing(10)
+                                    .fixedSize(horizontal: false, vertical: true)
+                                    .padding(12)
+                            }
                         }
                     }
                 }
                 Text("해당 자료는 중앙치매센터의 '2020 나에게 힘이 되는 치매가이드북'을 기반으로 제작되었습니다.\n제공되는 음성은 CLOVA Dubbing으로 제작한 AI 보이스 입니다.")
                     .foregroundColor(.black)
+                    .fixedSize(horizontal: false, vertical: true)
             }
             .padding()
         }
     }
+    
+    
 }
 
 class Model: ObservableObject {
-    @Published var data: String = ""
     @Published var dataArr: Array<String> = []
+    @Published var audioPlayer: AVAudioPlayer!
     
     init(filename: String) {
-        self.load(file: "Data/Text/" + filename)
+        self.loadTextContents(file: "Data/Text/" + filename)
+        self.loadSoundContents(file: "Data/Audio/" + filename)
     }
     
-    func load(file: String) {
+    func loadTextContents(file: String) {
         if let filepath = Bundle.main.path(forResource: file, ofType: "txt") {
             do {
                 let contents = try String(contentsOfFile: filepath)
                 DispatchQueue.main.async {
-                    self.data = contents
-                    self.dataArr = self.data.components(separatedBy: .newlines)
+                    self.dataArr = contents.components(separatedBy: .newlines)
                 }
             } catch let error as NSError {
                 print(error.localizedDescription)
@@ -80,6 +106,20 @@ class Model: ObservableObject {
         }
     }
     
+    func loadSoundContents(file: String) {
+        if let filepath = Bundle.main.url(forResource: file, withExtension: "mp3") {
+            do {
+                let contents = try AVAudioPlayer(contentsOf: filepath)
+                DispatchQueue.main.async {
+                    self.audioPlayer = contents
+                }
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        } else {
+            print("File not found")
+        }
+    }
 }
 
 
