@@ -24,14 +24,8 @@ struct ContentView: View {
                         label: {
                             ZStack{
                                 RoundedRectangle(cornerRadius:10.0).fill(Color.white)
-                                VStack{
-                                    Image("Flower1")
-                                    Text("치매 안내서")
-                                        .foregroundColor(Color.black)
-                                        .font(.system(size:80))
-                                        .fontWeight(.black)
-                                        .multilineTextAlignment(.center)
-                                }
+                                Image("치매교육")
+                                    .resizable()
                             }
                         }
                     )
@@ -40,11 +34,8 @@ struct ContentView: View {
                         label: {
                             ZStack{
                                 RoundedRectangle(cornerRadius:10.0).fill(Color.purple)
-                                Text("치매 자가 진단")
-                                    .foregroundColor(Color.white)
-                                    .font(.system(size:80))
-                                    .fontWeight(.black)
-                                    .multilineTextAlignment(.center)
+                                Image("자가진단")
+                                    .resizable()
                             }
                         }
                     )
@@ -55,11 +46,8 @@ struct ContentView: View {
                         label: {
                             ZStack{
                                 RoundedRectangle(cornerRadius:10.0).fill(Color.green)
-                                Text("치매 예방 게임")
-                                    .foregroundColor(Color.white)
-                                    .font(.system(size:80))
-                                    .fontWeight(.black)
-                                    .multilineTextAlignment(.center)
+                                Image("게임")
+                                    .resizable()
                             }
                         }
                     )
@@ -69,11 +57,8 @@ struct ContentView: View {
                         label: {
                             ZStack{
                                 RoundedRectangle(cornerRadius:10.0).fill(Color.yellow)
-                                Text("치매안심센터 안내")
-                                    .foregroundColor(Color.white)
-                                    .font(.system(size:80))
-                                    .fontWeight(.black)
-                                    .multilineTextAlignment(.center)
+                                Image("센터안내")
+                                    .resizable()
                             }
                         }
                     )
