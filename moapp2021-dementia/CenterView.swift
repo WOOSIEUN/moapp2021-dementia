@@ -39,16 +39,22 @@ struct CenterView: View {
             Form{
                 Section{
                     Text("지역을 선택하세요")
-                        .font(.system(size:25))
-                    Picker(selection: $selectedcity, label:Text("시도선택").font(.system(size:25))) {
+                        .font(.system(size:30))
+                        .padding(10)
+                    Picker(selection: $selectedcity, label:Text("시도선택").font(.system(size:28))) {
                         ForEach(0 ..< cities.count) { index in
                              Text(self.cities[index]).tag(index)
-                                .font(.system(size:50))
+                               // .font(.system(size:50))
+                             //   .font(.headline)
+                                .frame(minWidth: 0, maxWidth: .infinity)
+                                .font(.system(size:28))
                         }
-                    }.pickerStyle(MenuPickerStyle())
+                    } //.pickerStyle(MenuPickerStyle())
+                    
                 }
             }
             .frame(width: 300)
+            
             
             
            VStack(alignment: .leading) {
@@ -76,10 +82,14 @@ struct CenterView: View {
                                 Button(action: {
                                     calling(number: number(selectcity: i))
                                 }){
-                                    Text(number(selectcity: i))
+                                    Text("전화 걸기")
                                         .font(.system(size:30))
+                                        .padding(5)
+                                        .background(Color.purple)
+                                        .cornerRadius(5)
                                         .padding(.leading, 20)
                                         .padding(.bottom, 20)
+                                        .foregroundColor(Color.white)
                                 }
                                 Spacer()
                                 Divider()
