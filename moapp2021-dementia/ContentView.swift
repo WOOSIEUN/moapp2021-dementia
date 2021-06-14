@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    //var DementiaTestVM: DementiaTestVM
+    @State var isNavigationBarHidden: Bool = false
     var csv_content : read_csvfile
+    
     init(csv_content: read_csvfile){
         self.csv_content=csv_content
     }
@@ -23,8 +24,14 @@ struct ContentView: View {
                         label: {
                             ZStack{
                                 RoundedRectangle(cornerRadius:10.0).fill(Color.white)
-                                RoundedRectangle(cornerRadius: 10.0).stroke(lineWidth: 3)
-                                Text("치매 교육")
+                                VStack{
+                                    Image("Flower1")
+                                    Text("치매 안내서")
+                                        .foregroundColor(Color.black)
+                                        .font(.system(size:80))
+                                        .fontWeight(.black)
+                                        .multilineTextAlignment(.center)
+                                }
                             }
                         }
                     )
@@ -32,9 +39,12 @@ struct ContentView: View {
                         destination: DementiaTestView(),
                         label: {
                             ZStack{
-                                RoundedRectangle(cornerRadius:10.0).fill(Color.white)
-                                RoundedRectangle(cornerRadius: 10.0).stroke(lineWidth: 3)
-                                Text("자가 진단")
+                                RoundedRectangle(cornerRadius:10.0).fill(Color.purple)
+                                Text("치매 자가 진단")
+                                    .foregroundColor(Color.white)
+                                    .font(.system(size:80))
+                                    .fontWeight(.black)
+                                    .multilineTextAlignment(.center)
                             }
                         }
                     )
@@ -44,9 +54,12 @@ struct ContentView: View {
                         destination: GameView(),
                         label: {
                             ZStack{
-                                RoundedRectangle(cornerRadius:10.0).fill(Color.white)
-                                RoundedRectangle(cornerRadius: 10.0).stroke(lineWidth: 3)
-                                Text("게임")
+                                RoundedRectangle(cornerRadius:10.0).fill(Color.green)
+                                Text("치매 예방 게임")
+                                    .foregroundColor(Color.white)
+                                    .font(.system(size:80))
+                                    .fontWeight(.black)
+                                    .multilineTextAlignment(.center)
                             }
                         }
                     )
@@ -55,49 +68,25 @@ struct ContentView: View {
                         destination: CenterView(csv_content: csv_content),
                         label: {
                             ZStack{
-                                RoundedRectangle(cornerRadius:10.0).fill(Color.white)
-                                RoundedRectangle(cornerRadius: 10.0).stroke(lineWidth: 3)
-                                Text("센터 안내")
+                                RoundedRectangle(cornerRadius:10.0).fill(Color.yellow)
+                                Text("치매안심센터 안내")
+                                    .foregroundColor(Color.white)
+                                    .font(.system(size:80))
+                                    .fontWeight(.black)
+                                    .multilineTextAlignment(.center)
                             }
                         }
                     )
                 }
             }
+            .background(Color.gray)
         }
         .navigationViewStyle(StackNavigationViewStyle())
+        .navigationBarTitle("처음화면")
+        .navigationBarHidden(self.isNavigationBarHidden)
+        .onAppear() {
+            self.isNavigationBarHidden = true
+        }
+        .padding()
     }
-        
-//        VStack {
-//            ForEach(DementiaTestVM.testItems) { testItem in
-//                DementiaTestView().onTapGesture {
-//                    DementiaTestVM.chooseTrue(testItem: testItem)
-//                }
-//            }
-//        }
-//            .padding()
-//            .foregroundColor(Color.orange)
-//            .font(Font.largeTitle)
-//    }
 }
-//struct DementiaTestView: View {
-//        var testItem: DementiaTestM<String>.TestItem
-//
-//        var body: some View {
-//            ZStack{
-//            //if card.isFaceUp {
-//                RoundedRectangle(cornerRadius: 10.0).fill(Color.white)
-//                RoundedRectangle(cornerRadius: 10.0).stroke(lineWidth: 3)
-//                Text(testItem.content)
-//            //} else {
-//                //RoundedRectangle(cornerRadius: 10.0).fill()
-//
-//            //}
-//        }
-//    }
-//}
-
-//    struct Content_Previews: PreviewProvider {
-//        static var previews: some View {
-//            ContentView()
-//        }
-//    }

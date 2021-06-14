@@ -14,7 +14,7 @@ struct DementiaGuideView: View {
                 Text("힘이 되는 치매 안내서")
                     .font(.system(size:80))
                     .fontWeight(.black)
-                    .padding(.horizontal, 20)
+                    .padding(20)
                 
                 ScrollView {
                     Group {
